@@ -1,0 +1,31 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate curriculum data
+        run: python3 tools/build.py --check
+      - name: Rebuild site
+        run: python3 tools/build.py
+      - name: Ensure generated site is committed
+        run: |
+          if [ -n "$(git status --porcelain docs books)" ]; then
+            echo "::error::docs/ or books/ are out of date. Run: python3 tools/build.py and commit the result."
+            git status --porcelain docs books
+            exit 1
+          fi
+      - name: Check for broken internal links
+        run: python3 tools/check_links.py

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About &middot; Scifusion</title>
+<meta name="description" content="Free science notes, worked examples and practice questions for Classes 6 to 12.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="logo">&#9883;</span>
+      <span class="brand-text"><strong>Scifusion</strong><small>Science, fused into clarity</small></span>
+    </a>
+    <nav class="top-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="#classes">Classes</a>
+      <a href="search.html">Search</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+<h1>About Scifusion</h1>
+<p class="lead">Scifusion is a free, open science library for Classes 6 to 12. It covers
+172 chapters and 344 topics with 688 worked examples and
+1032 practice questions.</p>
+
+<h2>What's inside</h2>
+<ul>
+  <li><strong>Every chapter</strong> of the NCERT/CBSE science syllabus for Classes 6&ndash;10, plus separate Physics, Chemistry and Biology books for Classes 11&ndash;12.</li>
+  <li><strong>Topic pages</strong> with a summary, key points, key terms, formulas where relevant, and at least two worked examples.</li>
+  <li><strong>Practice</strong> &mdash; MCQs with explanations and short-answer questions with model answers.</li>
+  <li><strong>A randomised quiz</strong> for every subject, and printable notes for offline study.</li>
+</ul>
+
+<h2>How it is built</h2>
+<p>All content is hand-written as plain Python data in <code>tools/data/</code>. A small generator
+(<code>tools/build.py</code>) validates the data and produces this site in <code>docs/</code> plus
+Markdown books in <code>books/</code>. There are no trackers, no accounts and no external CDNs
+&mdash; the site works offline.</p>
+
+<h2>Contributing</h2>
+<ol>
+  <li>Edit or add a subject file in <code>tools/data/</code> (copy an existing one as a template).</li>
+  <li>Run <code>python3 tools/build.py</code> &mdash; it checks that every topic has at least two examples and three questions with answers.</li>
+  <li>Commit both the data change and the regenerated site.</li>
+</ol>
+
+<h2>Coverage</h2>
+<table class="coverage"><thead><tr><th>Class</th><th>Subject</th><th>Chapters</th><th>Topics</th><th>Questions</th></tr></thead><tbody>
+<tr><td>6</td><td>Science</td><td>16</td><td>32</td><td>96</td></tr><tr><td>7</td><td>Science</td><td>18</td><td>36</td><td>108</td></tr><tr><td>8</td><td>Science</td><td>18</td><td>36</td><td>108</td></tr><tr><td>9</td><td>Science</td><td>15</td><td>30</td><td>90</td></tr><tr><td>10</td><td>Science</td><td>14</td><td>28</td><td>84</td></tr><tr><td>11</td><td>Physics</td><td>14</td><td>28</td><td>84</td></tr><tr><td>11</td><td>Chemistry</td><td>14</td><td>28</td><td>84</td></tr><tr><td>11</td><td>Biology</td><td>22</td><td>44</td><td>132</td></tr><tr><td>12</td><td>Physics</td><td>14</td><td>28</td><td>84</td></tr><tr><td>12</td><td>Chemistry</td><td>14</td><td>28</td><td>84</td></tr><tr><td>12</td><td>Biology</td><td>13</td><td>26</td><td>78</td></tr>
+</tbody></table>
+<p class="muted small">Scifusion is an independent study resource. It follows the themes of the NCERT/CBSE syllabus but is not an official NCERT publication.</p>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p><strong>Scifusion</strong> &middot; Science notes for Classes 6&ndash;12 &middot; built from open, hand-written curriculum data.</p>
+    <p class="muted">Content follows the NCERT/CBSE science themes and is equally useful for ICSE and state boards. Found a mistake? Open an issue.</p>
+  </div>
+</footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
